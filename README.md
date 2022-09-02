@@ -26,8 +26,8 @@ pytest --nbmake **/*ipynb
 ```
 
 ```sh
- mamba install -y pytest-cov nbmake  # or:
- conda install -y -c conda-forge pytest-cov nbmake
+ mamba install -y pytest-cov pytest-xdist nbmake  # or:
+ conda install -y -c conda-forge pytest-cov pytest-xdist nbmake
  pytest --nbmake **/*ipynb
  ```
 
@@ -118,8 +118,9 @@ For repos containing a large number of notebooks that run slowly, you can run ea
 in parallel using `pytest-xdist`.
 
 ```sh
-pip install pytest-xdist
-
+# mamba install -y pytest-xdist nbmake  # or:
+# conda install -y -c conda-forge pytest-xdist nbmake
+pip install pytest-xdist nbmake
 pytest --nbmake -n=auto
 ```
 
@@ -209,6 +210,7 @@ pytest -p no:nbmake
 * [pytest docs](https://pytest.org/)
 * [pytest source: pytest-dev/pytest](https://github.com/pytest-dev/pytest)
 * [pytest-dev/pytest-cov](https://github.com/pytest-dev/pytest-cov)
+* [pytest-dev/pytest-xdist](https://github.com/pytest-dev/pytest-xdist)
 * [jupyter book](https://github.com/executablebooks/jupyter-book)
 * [jupyter cache](https://github.com/executablebooks/jupyter-cache)
 * [MyST-NB](https://github.com/executablebooks/MyST-NB)
