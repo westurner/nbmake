@@ -25,6 +25,12 @@ pip install pytest nbmake
 pytest --nbmake **/*ipynb
 ```
 
+```sh
+ mamba install -y pytest-cov nbmake  # or:
+ conda install -y -c conda-forge pytest-cov nbmake
+ pytest --nbmake **/*ipynb
+ ```
+
 ## Configure Cell Timeouts
 
 You can configure the cell timeout with the following pytest flag:
@@ -200,7 +206,9 @@ pytest -p no:nbmake
 
 * A more in-depth [intro to nbmake](https://semaphoreci.com/blog/test-jupyter-notebooks-with-pytest-and-nbmake) running on Semaphore CI
 * [nbmake action](https://github.com/treebeardtech/treebeard)
-* [pytest](https://pytest.org/)
+* [pytest docs](https://pytest.org/)
+* [pytest source: pytest-dev/pytest](https://github.com/pytest-dev/pytest)
+* [pytest-dev/pytest-cov](https://github.com/pytest-dev/pytest-cov)
 * [jupyter book](https://github.com/executablebooks/jupyter-book)
 * [jupyter cache](https://github.com/executablebooks/jupyter-cache)
 * [MyST-NB](https://github.com/executablebooks/MyST-NB)
